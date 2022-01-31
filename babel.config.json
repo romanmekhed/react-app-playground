@@ -1,0 +1,28 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "modules": false
+      }
+    ],
+    "@babel/preset-react"
+  ],
+
+  "plugins": [
+    ["@babel/plugin-transform-runtime",
+      {
+        "regenerator": true
+      }
+    ],
+    "@loadable/babel-plugin",
+    "babel-plugin-styled-components",
+    "@babel/plugin-syntax-dynamic-import",
+    "@babel/plugin-syntax-optional-chaining",
+    "inline-react-svg"
+  ],
+
+  "overrides": [{
+    "test": "./node_modules"
+  }]
+}

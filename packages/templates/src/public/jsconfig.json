@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "helpers/*": ["./helpers/*"],
+      "hooks/*": ["./hooks/*"],
+      "app/*": ["./pages/app.js"]
+    }
+  }
+}

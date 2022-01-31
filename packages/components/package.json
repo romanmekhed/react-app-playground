@@ -1,0 +1,19 @@
+{
+  "name": "@nfs-react/components",
+  "sideEffects": false,
+  "main": "lib/index.js",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "babel --root-mode upward --watch src -d lib --ignore **/*.stories.js,**/*.spec.js",
+    "build": "babel --root-mode upward src -d lib --ignore **/*.stories.js,**/*.spec.js"
+  },
+  "dependencies": {
+    "libphonenumber-js": "^1.8.3",
+    "react-slick": "^0.28.1",
+    "recharts": "^2.0.9"
+  },
+  "devDependencies": {
+    "prettier": "2.0.5"
+  },
+  "license": "ISC"
+}

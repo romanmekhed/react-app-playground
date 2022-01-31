@@ -1,0 +1,79 @@
+{
+  "name": "@nfs-react/templates",
+  "sideEffects": false,
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "webpack --mode=production && npm run copy_static_assets",
+    "dev": "rm -rf dist/* && webpack --mode=development && npm run copy_static_assets && concurrently \"webpack --watch\" \"nodemon -V dist/server.js\"",
+    "test": "npm run webpack && concurrently \"npm run webpack --watch\" \"mocha --watch\"",
+    "start": "node dist/server.js",
+    "copy_static_assets": "node copyStaticAssets.js",
+    "webpack": "webpack --config webpack.test.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "engines": {
+    "node": "^12.17.0 || ^14.15.3 || ^16.1.0"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@hookform/resolvers": "^2.5.1",
+    "@loadable/component": "^5.13.1",
+    "@loadable/server": "^5.13.1",
+    "@nfs-react/components": "1.0.0",
+    "@sentry/react": "^6.9.0",
+    "axios": "^0.21.1",
+    "axios-retry": "^3.1.9",
+    "compression": "1.7.4",
+    "concurrently": "^6.2.0",
+    "dotenv": "^10.0.0",
+    "express": "4.17.1",
+    "express-winston": "^4.0.5",
+    "form-data": "^4.0.0",
+    "html-react-parser": "^1.2.7",
+    "http-proxy-middleware": "^2.0.1",
+    "ioredis": "^4.19.2",
+    "ioredis-timeout": "^1.5.0",
+    "rc-slider": "^9.3.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-error-boundary": "^3.1.1",
+    "react-helmet-async": "^1.0.6",
+    "react-hook-form": "^7.11.1",
+    "react-lazy-hydration": "^0.1.0",
+    "react-lazyload": "^3.1.0",
+    "react-lottie": "^1.2.3",
+    "react-router-dom": "^5.2.0",
+    "react-transition-group": "^4.4.2",
+    "react-uuid": "^1.0.2",
+    "smoothscroll-polyfill": "^0.4.4",
+    "styled-components": "^5.3.0",
+    "webpack": "^5.24.2",
+    "webpack-bundle-analyzer": "^4.4.0",
+    "winston": "^3.3.3",
+    "yup": "^0.32.9"
+  },
+  "devDependencies": {
+    "@loadable/babel-plugin": "^5.13.0",
+    "@loadable/webpack-plugin": "^5.13.0",
+    "@svgr/webpack": "^5.5.0",
+    "chai": "4.2.0",
+    "cross-env": "^7.0.2",
+    "enzyme": "3.11.0",
+    "enzyme-adapter-react-16": "1.15.2",
+    "fs-extra": "^10.0.0",
+    "husky": "4",
+    "mocha": "^8.4.0",
+    "nodemon": "2.0.2",
+    "pretty-quick": "^3.1.0",
+    "react-addons-test-utils": "15.6.2",
+    "webpack-cli": "^4.5.0",
+    "webpack-node-externals": "^3.0.0",
+    "webpack-shell-plugin-next": "^2.1.1"
+  }
+}
