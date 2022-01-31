@@ -52,7 +52,7 @@ const ArticleInner = styled.div`
   display: grid;
 
   @media ${DESKTOP} {
-    grid-template-columns: 535px 570px;
+    grid-template-columns: 536px 570px;
     column-gap: 36px;
     margin-bottom: 64px;
   }
