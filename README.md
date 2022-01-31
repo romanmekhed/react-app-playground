@@ -39,4 +39,4 @@ yarn templates-dev
 Note: to update static assets, such as new images, you will need to restart templates-dev process
 ```
 
-Open link to further instructions: http://localhost:3000/intro
+Open link for further instructions: http://localhost:3000/intro
